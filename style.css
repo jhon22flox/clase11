@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    background-color: rgb(11, 126, 45);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.boton{
+    display: block;
+    background-color: rgb(6, 155, 26);
+    color: black;
+    margin: 20px auto;
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.boton:hover{
+    background-color: aqua;
+    color: rgb(4, 54, 37);
+
+}
+
+.boton:active{
+    background-color: cadetblue;
+    color: brown;
+}
+
+#p1:target{
+    background-color: rgb(77, 128, 223, 0.4);
+}
+#p2:target{
+    background-color: rgba(180, 67, 165, 0.4);
+}
+#p3:target{
+    background-color: rgba(6, 94, 11, 0.4);
+}
+
+.textos1, .textos2{
+    background-color: burlywood;
+    width: max-content;
+    padding: 60px 60px;
+    margin: 30px auto;
+    text-align: center;
+}
+/* .textos1 p:first-child{ */
+ /* .textos1 p:last-child */  
+/* .textos1 p:nth-child(odd) */
+/* .textos1 p:nth-child(ever) */
+/* .textos1 p:nth-child(3) */
+/* .textos1 p:nth-last-child(n+3) */
+.textos1 p:nth-child(n+3), .textos2 p:nth-child(n+4){
+    background-color: rgb(7, 45, 46);
+    color: rgb(236, 176, 154);
+
+}
+.tabla{
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+.tabla th, td{
+    border: 2px solid greenyellow;
+    padding: 5px;
+    
+}
+.tabla thead{
+    background-color: chartreuse;
+    color: beige;
+}
+.tabla tr:nth-child(even){
+    background-color: rgb(138, 111, 163);
+    color: black;
+}
+.nombre{
+    display: flex;
+    margin: 40px auto;
+    justify-content: center;
+    list-style: none;
+}
+.nombre li{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.nombre li:nth-child(odd){
+    background-color: chocolate;
+    color: coral;
+    padding: 10px;  
+    text-shadow: 5px 5px 7px gray;
+}
+.nombre li:nth-child(even){
+    background-color: coral;
+    color: chocolate;
+    padding: 10px;
+    text-shadow: 5px 5px 7px gray;
+
+}
+.listas{
+    width: max-content;
+    margin: 30px auto;
+    background-color: rgba(173, 114, 114, 0.3);
+    padding: 20px;
+
+}
+.listas li::before{
+    content: "🌴";
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.textos2 p::after{
+    content: "🎶";
+}
+
+.cuadro{
+    background-color: rgb(10, 37, 37, 0.4);
+    width: 55%;
+    padding: 15px;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+
+}
+.cuadro::before{
+    width: 80px;
+    height: 30px;
+    content: "🔴🟠🟡";
+    top: calc(50% - 15px);
+    right: calc(100% - 15px);
+    position: absolute;
+}
+.cuadro::after{
+    width: 80px;
+    height: 30px;
+    content: "🔵🟣🟤";
+    top: calc(50% - 15px);
+    left:calc(100% - 15px);
+    position: absolute;
+}
+
+@media screen and (max-width:500px) {
+    .cuadro::after, .cuadro::before{
+        content: "🦖";
+        
+    }
+    .cuadro{
+        width: 100%;
+    }
+    
+}
+.formu{
+    margin: 50px 20px;
+
+}
+label{
+    background-color: aquamarine;
+    padding: 10px;
+    color: brown;
+}
+.formu:checked + label{
+    background-color: blue;
+}
